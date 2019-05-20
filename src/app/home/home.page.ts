@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Insomnia } from '@ionic-native/insomnia/ngx';
+import {BarcodeScanner} from '@ionic-native/barcode-scanner/ngx';
+
 
 @Component({
   selector: 'app-home',
@@ -26,8 +28,15 @@ export class HomePage {
 
   overallTimer: any = false;
 
-  constructor(private insomnia: Insomnia){
+  constructor(private insomnia: Insomnia,public barcode:BarcodeScanner){
 
+  }
+
+  encode(){
+    var textToEncode = window.prompt("ENter text to encode");
+    this.barcode.encode(this.barcode.Encode.TEXT_TYPE,textToEncode).then((data)=>{
+      
+    })
   }
 
   startTime(){
