@@ -10,9 +10,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Insomnia } from '@ionic-native/insomnia/ngx';
 import {BarcodeScanner} from '@ionic-native/barcode-scanner/ngx';
+import { BarcodeComponent } from './barcode/barcode.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BarcodeComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
@@ -22,6 +23,6 @@ import {BarcodeScanner} from '@ionic-native/barcode-scanner/ngx';
     Insomnia,
     BarcodeScanner    
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [BarcodeComponent]
 })
 export class AppModule {}
