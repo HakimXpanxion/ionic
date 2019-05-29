@@ -11,7 +11,7 @@ export class BarcodeComponent implements OnInit {
   constructor(public barcode:BarcodeScanner) { }
 
   encode(){
-    var textToEncode = window.prompt("ENter text to encode");
+    var textToEncode = window.prompt("Enter text to encode");
     this.barcode.encode(this.barcode.Encode.TEXT_TYPE,textToEncode).then((data)=>{
       alert(JSON.stringify(data));
     },(err)=>{
