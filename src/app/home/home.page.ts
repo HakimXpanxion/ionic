@@ -32,13 +32,6 @@ export class HomePage {
 
   }
 
-  encode(){
-    var textToEncode = window.prompt("ENter text to encode");
-    this.barcode.encode(this.barcode.Encode.TEXT_TYPE,textToEncode).then((data)=>{
-      
-    })
-  }
-
   startTime(){
 
     if(this.timer){
